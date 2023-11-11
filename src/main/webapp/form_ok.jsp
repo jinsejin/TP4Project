@@ -1,8 +1,8 @@
-<%@ page contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="EUC-KR">
+<html lang="ko">
 <head>
-    <meta charset="EUC-KR">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Submission Result</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,17 +17,17 @@
 </head>
 <body>
 <div class="custom-container-editPage">
-    <h1>ÀÔ·ÂÇÏ½Å Á¤º¸¸¦ È®ÀÎÇÕ´Ï´Ù.</h1>
-    <p>ÀÌ¸§: <%= request.getParameter("name") %></p>
-    <p>³ªÀÌ: <%= request.getParameter("age") %></p>
-    <p>±¹Àû: <%= request.getParameter("nationality") %></p>
-    <p>Áø·Î: <%= request.getParameter("job") %></p>
-    <p>°íÇâ: <%= request.getParameter("hometown") %></p>
-    <p>ÇÐ±³: <%= request.getParameter("school") %></p>
-    <p>Ãë¹Ì: <%= request.getParameter("hobby") %></p>
-    <p>ÇÐºÎ: <%= request.getParameter("department") %></p>
-    <p>Æ¯±â: <%= request.getParameter("specialty") %></p>
-    <p>µ¿ÀÇ ¿©ºÎ: <%= request.getParameter("agree") != null ? "µ¿ÀÇÇÔ" : "µ¿ÀÇÇÏÁö ¾ÊÀ½" %></p>
+    <h1>ìž…ë ¥í•˜ì‹  ì •ë³´ë¥¼ í™•ì¸í•©ë‹ˆë‹¤.</h1>
+    <p>ì´ë¦„: <%= new String(request.getParameter("name").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>ë‚˜ì´: <%= new String(request.getParameter("age").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>êµ­ì : <%= new String(request.getParameter("nationality").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>ì§„ë¡œ: <%= new String(request.getParameter("job").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>ê³ í–¥: <%= new String(request.getParameter("hometown").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>í•™êµ: <%= new String(request.getParameter("school").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>ì·¨ë¯¸: <%= new String(request.getParameter("hobby").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>í•™ë¶€: <%= new String(request.getParameter("department").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>íŠ¹ê¸°: <%= new String(request.getParameter("specialty").getBytes("ISO-8859-1"), "UTF-8") %></p>
+    <p>ë™ì˜ ì—¬ë¶€: <%= request.getParameter("agree") != null ? "ë™ì˜í•¨" : "ë™ì˜í•˜ì§€ ì•ŠìŒ" %></p>
 </div>
 </body>
 </html>
